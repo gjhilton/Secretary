@@ -1,7 +1,7 @@
 {
 	"name": "sharpie",
 	"private": true,
-	"version": "1.2.8",
+	"version": "1.2.9",
 	"type": "module",
 	"scripts": {
 		"dev": "npm run update-db && npm run prepare-public && npx panda codegen --config src/config/panda.config.mjs && vite --config src/config/vite.config.js --host",

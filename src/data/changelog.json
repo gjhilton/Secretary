@@ -1,5 +1,9 @@
 [
 	{
+		"version": "1.2.9",
+		"description": "Bugfix: refresh images."
+	},
+	{
 		"version": "1.2.8",
 		"description": "Several new hands added; Bugfixes; Quality improvements to test suite."
 	},

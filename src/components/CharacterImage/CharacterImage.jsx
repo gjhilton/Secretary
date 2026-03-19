@@ -56,6 +56,7 @@ export const CharacterImage = ({
 			})}
 		>
 			<img
+				key={imagePath}
 				src={imagePath}
 				alt={caption || 'Character to identify'}
 				className={css({
