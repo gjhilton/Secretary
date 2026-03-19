@@ -6,6 +6,7 @@ import { STATUS } from '@lib/utilities/gameLogic';
 import { GAME_MODES } from '@lib/constants/stages';
 import { useEnterKey } from '@lib/hooks/useEnterKey';
 import { flexCenter } from '@lib/constants/ui';
+import { reportMistakeUrl } from '@lib/constants/forms';
 
 const SPACING = {
 	SECTION_GAP: '3xl',
@@ -140,6 +141,41 @@ export const IncorrectAnswer = ({
 				})}
 			>
 				<Button onClick={onNext} label="Next" />
+			</div>
+			<div
+				className={css({
+					display: 'flex',
+					justifyContent: 'center',
+					marginTop: 'lg',
+				})}
+			>
+				<a
+					href={reportMistakeUrl({
+						imagePath: solution.imagePath,
+						collection: alphabetTitle,
+					})}
+					onClick={(e) => {
+						e.preventDefault();
+						window.open(
+							reportMistakeUrl({
+								imagePath: solution.imagePath,
+								collection: alphabetTitle,
+							}),
+							'_blank',
+							'noopener,noreferrer,width=700,height=600'
+						);
+					}}
+					rel="noreferrer"
+					className={css({
+						fontSize: 'xs',
+						color: 'fg.subtle',
+						textDecoration: 'underline',
+						cursor: 'pointer',
+						_hover: { color: 'fg' },
+					})}
+				>
+					Report a mistake
+				</a>
 			</div>
 		</>
 	);

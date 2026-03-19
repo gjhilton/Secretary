@@ -1,5 +1,9 @@
 [
 	{
+		"version": "1.2.10",
+		"description": "Added error reporting form."
+	},
+	{
 		"version": "1.2.9",
 		"description": "Bugfix: refresh images."
 	},
